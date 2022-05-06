@@ -25,7 +25,7 @@ public class DeviceDataConsumer {
         properties.put("auto.offset.reset", "earliest");
 
         // avro part (deserializer)
-        properties.setProperty("key.deserializer", StringDeserializer.class.getName());
+        properties.setProperty("key.deserializer", KafkaAvroDeserializer.class.getName());
         properties.setProperty("value.deserializer", KafkaAvroDeserializer.class.getName());
         properties.setProperty("schema.registry.url", "http://127.0.0.1:8081");
         properties.setProperty("specific.avro.reader", "true");

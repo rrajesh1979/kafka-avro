@@ -1,0 +1,13 @@
+{
+  "namespace": "org.rrajesh1979",
+  "type": "record",
+  "name": "DeviceDataKey",
+  "doc": "Avro Schema for Device Data Key",
+  "version": 1,
+  "fields": [
+    {
+      "name": "deviceId",
+      "type": "long"
+    }
+  ]
+}
