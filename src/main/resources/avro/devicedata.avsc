@@ -1,0 +1,25 @@
+{
+  "namespace": "org.rrajesh1979",
+  "type": "record",
+  "name": "DeviceData",
+  "doc": "Avro Schema for Device Data",
+  "version": 1,
+  "fields": [
+    {
+      "name": "deviceId",
+      "type": "long"
+    },
+    {
+      "name": "temp",
+      "type": "double"
+    },
+    {
+      "name": "humidity",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "long"
+    }
+  ]
+}

@@ -13,6 +13,8 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <avro.version>1.11.0</avro.version>
+        <kafka.version>3.1.0</kafka.version>
+        <confluent.version>7.1.1</confluent.version>
     </properties>
 
     <repositories>
@@ -20,6 +22,10 @@
             <id>avro-repo</id>
             <name>Avro Repository</name>
             <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>confluent</id>
+            <url>https://packages.confluent.io/maven/</url>
         </repository>
     </repositories>
 
@@ -54,6 +60,20 @@
             <groupId>org.xerial.snappy</groupId>
             <artifactId>snappy-java</artifactId>
             <version>1.1.8.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.confluent/kafka-avro-serializer -->
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>${confluent.version}</version>
         </dependency>
 
     </dependencies>
@@ -108,7 +128,7 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>target/generated-sources/avro</source>
+                                <source>${basedir}/target/generated-sources/avro</source>
                             </sources>
                         </configuration>
                     </execution>
