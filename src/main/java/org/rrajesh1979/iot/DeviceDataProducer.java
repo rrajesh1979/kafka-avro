@@ -6,7 +6,6 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.rrajesh1979.Customer;
 import org.rrajesh1979.DeviceData;
 
 import java.util.Properties;
