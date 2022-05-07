@@ -1,0 +1,65 @@
+{
+  "namespace": "org.rrajesh1979",
+  "type": "record",
+  "name": "DeviceDataStatistics",
+  "doc": "Avro Schema for Device Data Statistics",
+  "version": 1,
+  "fields": [
+    {
+      "name": "deviceId",
+      "type": "long",
+      "doc": "Device Id",
+      "default": -1
+    },
+    {
+      "name": "avgTemp",
+      "type": "double",
+      "doc": "Average Temperature",
+      "default": 0
+    },
+    {
+      "name": "avgHumidity",
+      "type": "double",
+      "doc": "Average Humidity",
+      "default": 0
+    },
+    {
+      "name": "maxTemp",
+      "type": "double",
+      "doc": "Maximum Temperature",
+      "default": 0
+    },
+    {
+      "name": "maxHumidity",
+      "type": "double",
+      "doc": "Maximum Humidity",
+      "default": 0
+    },
+    {
+      "name": "minTemp",
+      "type": "double",
+      "doc": "Minimum Temperature",
+      "default": 0
+    },
+    {
+      "name": "minHumidity",
+      "type": "double",
+      "doc": "Minimum Humidity",
+      "default": 0
+    },
+    {
+      "name": "numReadings",
+      "type": "long",
+      "doc": "Number of Readings",
+      "default": 0
+    },
+    {
+      "name": "last_agg_time",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "last data point in aggregation"
+    }
+  ]
+}

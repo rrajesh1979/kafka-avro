@@ -35,8 +35,8 @@ public class DeviceDataProducer {
 
         Random random = new Random();
 
-        for (long deviceId = 0; deviceId <= 10; deviceId++) {
-            for (long timestamp = 0; timestamp < 10; timestamp++) {
+        for (long deviceId = 0; deviceId <= 1; deviceId++) {
+            for (long timestamp = 0; timestamp < 5; timestamp++) {
                 DeviceDataKey deviceDataKey = DeviceDataKey.newBuilder()
                         .setDeviceId(deviceId)
                         .build();
